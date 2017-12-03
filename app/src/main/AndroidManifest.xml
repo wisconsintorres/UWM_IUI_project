@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uwm_iui.uwm_iui_project">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.hardware.camera" android:required="true"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/fi_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- splash screen act -->
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- main screen act -->
+        <activity android:name=".login_screen"></activity>
+        <activity android:name=".signup"></activity>
+        <activity android:name=".HomeScreen"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".StepTwo"></activity>
+        <activity android:name=".StepThree"></activity>
+
+    </application>
+
+</manifest>
