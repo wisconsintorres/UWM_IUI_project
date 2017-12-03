@@ -20,6 +20,7 @@ public class StepThree extends AppCompatActivity {
     public static final int REQUEST_CAPTURE = 1;
     ImageView result_photo;
     Button step3_back;
+    Button step3_next;
 
 
 
@@ -31,6 +32,7 @@ public class StepThree extends AppCompatActivity {
         camera = (ImageView) findViewById(R.id.camera);
         result_photo = (ImageView) findViewById(R.id.photoview);
         step3_back = (Button) findViewById(R.id.step3_back);
+        step3_next = (Button) findViewById(R.id.step3_next);
 
         camera.setOnClickListener(new View.OnClickListener() {
 
@@ -54,6 +56,20 @@ public class StepThree extends AppCompatActivity {
                 Intent new_activity_step3 = new Intent(StepThree.this, StepTwo.class);
 
                 startActivity(new_activity_step3);
+
+
+            }
+        });
+
+        //button back to home
+        step3_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //This is setting the login in button to bring you to the sign-up screen
+                Intent new_activity_home = new Intent(StepThree.this, HomeScreen.class);
+
+                startActivity(new_activity_home);
 
 
             }
