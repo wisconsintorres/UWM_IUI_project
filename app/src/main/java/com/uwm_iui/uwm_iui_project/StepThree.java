@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * Created by Joshua Torres on 12/2/2017.
@@ -68,6 +69,11 @@ public class StepThree extends AppCompatActivity {
 
                 //This is setting the login in button to bring you to the sign-up screen
                 Intent new_activity_home = new Intent(StepThree.this, HomeScreen.class);
+
+                //message letting the user know that it worked
+                Toast sucess = Toast.makeText(StepThree.this, "Entry successfully added to Database!", Toast.LENGTH_LONG);
+                sucess.show();
+
 
                 startActivity(new_activity_home);
 
