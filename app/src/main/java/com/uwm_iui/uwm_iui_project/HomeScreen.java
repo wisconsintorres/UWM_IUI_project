@@ -13,11 +13,14 @@ public class HomeScreen extends AppCompatActivity {
 
     public Button button_begin;
     public Button button_instructions;
+    public  Button button_catalog;
 
     public void init() {
 
         button_begin = (Button)findViewById(R.id.button_begin);
         button_instructions = (Button)findViewById(R.id.button_instructions);
+        button_catalog = (Button)findViewById(R.id.button_catalog);
+
 
         button_begin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +29,19 @@ public class HomeScreen extends AppCompatActivity {
                 //setting the begin button to being you to the main activity
 
                 Intent new_activity = new Intent(HomeScreen.this, MainActivity.class);
+
+                startActivity(new_activity);
+
+            }
+        });
+
+        button_catalog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //setting the begin button to being you to the main activity
+
+                Intent new_activity = new Intent(HomeScreen.this, dataview.class);
 
                 startActivity(new_activity);
 

@@ -34,6 +34,8 @@
         <activity android:name=".StepTwo"></activity>
         <activity android:name=".StepThree"></activity>
         <activity android:name=".instructions"></activity>
+        <activity android:name=".dataview"></activity>
+
 
 
     </application>

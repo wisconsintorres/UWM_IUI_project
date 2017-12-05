@@ -23,8 +23,7 @@ public class MainActivity extends Activity {
     private final int REQ_CODE_SPEECH_INPUT = 100;
     public Button step1_next;
     public Button step1_back;
-
-
+    Database_Helper helper = new Database_Helper(this);
 
 
     @Override
@@ -39,6 +38,7 @@ public class MainActivity extends Activity {
         //buttons for movement
         step1_back = (Button)findViewById(R.id.step1_back);
         step1_next = (Button)findViewById(R.id.step1_next);
+
 
 
 
@@ -59,6 +59,18 @@ public class MainActivity extends Activity {
         step1_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+               //placing the text input into the Database
+                EditText name = (EditText) findViewById(R.id.txtSpeechInput);
+
+                String name_str = name.getText().toString();
+
+                Record r = new Record();
+                r.setName(name_str);
+                helper.insertRecord(r);
+
+
 
 
                 //This is setting the login in button to bring you to the sign-up screen
