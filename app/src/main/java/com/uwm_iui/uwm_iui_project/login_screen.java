@@ -16,7 +16,7 @@ public class login_screen extends AppCompatActivity {
 
     public void init() {
 
-        button_login = (Button)findViewById(R.id.button_login);
+        button_login = (Button)findViewById(R.id.button_instructions);
         button_signup = (Button)findViewById(R.id.button_signup);
 
         button_login.setOnClickListener(new View.OnClickListener() {

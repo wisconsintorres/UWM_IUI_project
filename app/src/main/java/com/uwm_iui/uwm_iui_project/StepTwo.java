@@ -28,6 +28,9 @@ public class StepTwo extends AppCompatActivity {
     public Button step2_next;
     public Button step2_back;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,7 @@ public class StepTwo extends AppCompatActivity {
         //buttons for movement
         step2_back = (Button)findViewById(R.id.step2_back);
         step2_next = (Button)findViewById(R.id.step2_next);
+
 
 
 
@@ -67,6 +71,7 @@ public class StepTwo extends AppCompatActivity {
 
             }
         });
+
 
         //button back to home
         step2_back.setOnClickListener(new View.OnClickListener() {

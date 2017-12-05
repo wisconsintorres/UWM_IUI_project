@@ -12,10 +12,12 @@ import android.widget.EditText;
 public class HomeScreen extends AppCompatActivity {
 
     public Button button_begin;
+    public Button button_instructions;
 
     public void init() {
 
         button_begin = (Button)findViewById(R.id.button_begin);
+        button_instructions = (Button)findViewById(R.id.button_instructions);
 
         button_begin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,26 @@ public class HomeScreen extends AppCompatActivity {
 
             }
         });
+
+        //button to instructions
+        button_instructions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                //This is setting the login in button to bring you to the sign-up screen
+                Intent new_activity_step2 = new Intent(HomeScreen.this, instructions.class);
+
+
+                startActivity(new_activity_step2);
+
+
+            }
+        });
+
+
+
+
     }
 
 

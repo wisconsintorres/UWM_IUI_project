@@ -33,6 +33,8 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".StepTwo"></activity>
         <activity android:name=".StepThree"></activity>
+        <activity android:name=".instructions"></activity>
+
 
     </application>
 

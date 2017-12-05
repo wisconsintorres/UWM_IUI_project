@@ -24,6 +24,9 @@ public class MainActivity extends Activity {
     public Button step1_next;
     public Button step1_back;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,8 @@ public class MainActivity extends Activity {
         //buttons for movement
         step1_back = (Button)findViewById(R.id.step1_back);
         step1_next = (Button)findViewById(R.id.step1_next);
+
+
 
 
 
@@ -55,14 +60,18 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
+
                 //This is setting the login in button to bring you to the sign-up screen
                 Intent new_activity_step2 = new Intent(MainActivity.this, StepTwo.class);
+
 
                 startActivity(new_activity_step2);
 
 
             }
         });
+
+
 
         //button back to home
         step1_back.setOnClickListener(new View.OnClickListener() {
@@ -77,13 +86,6 @@ public class MainActivity extends Activity {
 
             }
         });
-
-
-
-
-
-
-
 
     }
 
