@@ -63,10 +63,25 @@ public class StepTwo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //This is setting the login in button to bring you to the sign-up screen
-                Intent new_activity_step3 = new Intent(StepTwo.this, StepThree.class);
+                //placing the text input into the Database
+                EditText name = (EditText) findViewById(R.id.txtSpeechInput2);
 
-                startActivity(new_activity_step3);
+                String name_str = name.getText().toString();
+
+                if (name_str.length() == 0) {
+
+                    //message letting the user know that it worked
+                    Toast sucess = Toast.makeText(StepTwo.this, "You need to enter text into the field!", Toast.LENGTH_LONG);
+                    sucess.show();
+
+                } else {
+
+                    //This is setting the login in button to bring you to the sign-up screen
+                    Intent new_activity_step3 = new Intent(StepTwo.this, StepThree.class);
+
+                    startActivity(new_activity_step3);
+
+                }
 
 
             }

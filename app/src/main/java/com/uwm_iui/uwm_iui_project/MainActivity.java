@@ -60,26 +60,31 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-
-               //placing the text input into the Database
+                //placing the text input into the Database
                 EditText name = (EditText) findViewById(R.id.txtSpeechInput);
 
                 String name_str = name.getText().toString();
 
-                Record r = new Record();
-                r.setName(name_str);
-                helper.insertRecord(r);
+                if (name_str.length() == 0) {
+
+                    //message letting the user know that it worked
+                    Toast sucess = Toast.makeText(MainActivity.this, "You need to enter text into the field!", Toast.LENGTH_LONG);
+                    sucess.show();
+
+                } else {
+
+                    Record r = new Record();
+                    r.setName(name_str);
+                    helper.insertRecord(r);
 
 
+                    //This is setting the login in button to bring you to the sign-up screen
+                    Intent new_activity_step2 = new Intent(MainActivity.this, StepTwo.class);
 
 
-                //This is setting the login in button to bring you to the sign-up screen
-                Intent new_activity_step2 = new Intent(MainActivity.this, StepTwo.class);
+                    startActivity(new_activity_step2);
 
-
-                startActivity(new_activity_step2);
-
-
+                }
             }
         });
 

@@ -17,19 +17,20 @@
         android:background="#ffffff"
         android:ellipsize="none"
         android:ems="10"
+        android:gravity="top"
         android:inputType="textMultiLine"
         android:maxLines="100"
         android:minLines="2"
         android:scrollHorizontally="false"
-        android:gravity="top"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.303" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,11 +38,11 @@
         android:text="Fossil description:"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.164" />
 
 
     <LinearLayout
@@ -61,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122">
+        app:layout_constraintVertical_bias="0.694">
 
 
         <ImageView

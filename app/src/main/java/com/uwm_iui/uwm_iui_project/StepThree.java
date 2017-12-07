@@ -22,6 +22,7 @@ public class StepThree extends AppCompatActivity {
     ImageView result_photo;
     Button step3_back;
     Button step3_next;
+    boolean camera_check;
 
 
 
@@ -43,6 +44,8 @@ public class StepThree extends AppCompatActivity {
                 Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(i, REQUEST_CAPTURE);
 
+                camera_check = true;
+
 
             }
         });
@@ -53,10 +56,11 @@ public class StepThree extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //This is setting the login in button to bring you to the sign-up screen
-                Intent new_activity_step3 = new Intent(StepThree.this, StepTwo.class);
 
-                startActivity(new_activity_step3);
+                    //This is setting the login in button to bring you to the sign-up screen
+                    Intent new_activity_step3 = new Intent(StepThree.this, StepTwo.class);
+
+                    startActivity(new_activity_step3);
 
 
             }
@@ -67,6 +71,13 @@ public class StepThree extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            if(camera_check == false){
+
+                //message letting the user know that it worked
+                Toast sucess = Toast.makeText(StepThree.this, "You need to caputre an image!", Toast.LENGTH_LONG);
+                sucess.show();
+            }else {
+
                 //This is setting the login in button to bring you to the sign-up screen
                 Intent new_activity_home = new Intent(StepThree.this, HomeScreen.class);
 
@@ -76,6 +87,8 @@ public class StepThree extends AppCompatActivity {
 
 
                 startActivity(new_activity_home);
+
+            }
 
 
             }
