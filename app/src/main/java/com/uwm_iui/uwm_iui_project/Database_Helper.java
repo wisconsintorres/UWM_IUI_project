@@ -20,7 +20,7 @@ public class Database_Helper extends SQLiteOpenHelper {
 
 
     private static final String TABLE_NAME = "contacts";
-    private static final String TABLE_NAME_RECORDS = "records";
+   // private static final String TABLE_NAME_RECORDS = "records";
 
     //CONTACTS
     private static final String COLUMN_ID = "id";
@@ -31,7 +31,7 @@ public class Database_Helper extends SQLiteOpenHelper {
 
     //table for records
     private static final String COLUMN_ID_RECORDS = "id";
-    private static final String COLUMN_NAME_RECORDS = "name";
+    //private static final String COLUMN_NAME_RECORDS = "name";
 
 
     SQLiteDatabase db;
@@ -41,8 +41,8 @@ public class Database_Helper extends SQLiteOpenHelper {
             "name text not null, email text not null, uname text not null, pass text not null);";
 
     //table creation for DB RECORDS
-    private static final String TABLE_CREATE1 = "create table" + TABLE_NAME_RECORDS  + "(" + COLUMN_ID_RECORDS + " INTEGER PRIMARY KEY," + COLUMN_NAME_RECORDS
-            + " TEXT" + " )";
+   // private static final String TABLE_CREATE1 = "create table" + TABLE_NAME_RECORDS  + "(" + COLUMN_ID_RECORDS + " INTEGER PRIMARY KEY," + COLUMN_NAME_RECORDS
+       //     + " TEXT" + " )";
 
 
     public Database_Helper(Context context){
@@ -55,12 +55,12 @@ public class Database_Helper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(TABLE_CREATE);
-        db.execSQL(TABLE_CREATE1);
+        //db.execSQL(TABLE_CREATE1);
         this.db = db;
 
     }
 
-    //inserting the values into the database from MainActivity
+    /*//inserting the values into the database from MainActivity
     public void insertRecord(Record r)
     {
 
@@ -81,6 +81,7 @@ public class Database_Helper extends SQLiteOpenHelper {
         db.close();
 
     }
+    */
 
 
     //populate database list
@@ -154,8 +155,8 @@ public class Database_Helper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         String query = "DROP TABLE IF EXISTS " +TABLE_NAME;
         db.execSQL(query);
-        String query1 = "DROP TABLE IF EXISTS " +TABLE_NAME_RECORDS;
-        db.execSQL(query1);
+       // String query1 = "DROP TABLE IF EXISTS " +TABLE_NAME_RECORDS;
+        //db.execSQL(query1);
         this.onCreate(db);
 
     }

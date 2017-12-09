@@ -73,9 +73,9 @@ public class MainActivity extends Activity {
 
                 } else {
 
-                    Record r = new Record();
-                    r.setName(name_str);
-                    helper.insertRecord(r);
+                 // Record r = new Record();
+                  //  r.setName(name_str);
+                   // helper.insertRecord(r);
 
 
                     //This is setting the login in button to bring you to the sign-up screen
